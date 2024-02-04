@@ -26,7 +26,6 @@ call git add .
 call git commit -m "Saved game"
 call git push
 )
-call git lfs lock *.sav
 
 copy Players\%palid%.sav Players\00000000000000000000000000000001.sav
 
@@ -42,4 +41,3 @@ call git checkout main
 call git pull origin main
 call git merge -Xtheirs %gitName%%YYYYMMDD% && call git branch -d %gitName%%YYYYMMDD%
 call git push && call git push origin --delete %gitName%%YYYYMMDD%
-call git lfs unlock *.sav
