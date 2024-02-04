@@ -16,6 +16,7 @@ set YYYYMMDD=%DATE:~10,4%%DATE:~4,2%%DATE:~7,2%
 if %currentbranch%==main (
 call git checkout .
 call git clean -fd
+call git pull origin main
 call git branch %gitName%%YYYYMMDD%
 call git checkout %gitName%%YYYYMMDD%
 call git push --set-upstream origin %gitName%%YYYYMMDD%
