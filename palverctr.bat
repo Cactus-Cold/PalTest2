@@ -41,3 +41,4 @@ call git checkout main
 call git pull origin main
 call git merge -Xtheirs %gitName%%YYYYMMDD% && call git branch -d %gitName%%YYYYMMDD%
 call git push && call git push origin --delete %gitName%%YYYYMMDD%
+pause
